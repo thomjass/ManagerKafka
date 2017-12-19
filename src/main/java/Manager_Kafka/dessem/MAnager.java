@@ -14,7 +14,7 @@ public class MAnager
 	public static String URL_Kafka;
     public static void main( String[] args )
     {
-    	URL_Kafka = args[2];
+    	URL_Kafka = args[1];
     	ZooConnection connection = new ZooConnection();
         try {
 			zk = connection.connect(args[0]);

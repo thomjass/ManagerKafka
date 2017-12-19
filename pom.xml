@@ -55,10 +55,6 @@
                     <programs>
                         <program>
                             <mainClass>Manager_Kafka.dessem.MAnager</mainClass>
-                            <commandLineArguments>
-                                <commandLineArgument>url_zoo</commandLineArgument>
-                                <commandLineArgument>url_kafka</commandLineArgument>
-                            </commandLineArguments>
                             <id>manager</id>
                         </program>
                     </programs>
