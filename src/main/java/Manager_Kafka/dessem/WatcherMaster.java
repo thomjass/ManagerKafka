@@ -64,7 +64,11 @@ public class WatcherMaster implements Watcher {
 							
 							try {
 								ZooConnection.zoo.create("/registry/"+id_to_enroll.get(i), "1".getBytes(), ZooDefs.Ids.CREATOR_ALL_ACL, CreateMode.PERSISTENT);
-								createATopic(id_to_enroll.get(i));
+								try {
+									createATopic(id_to_enroll.get(i));
+								}catch(Exception e) {
+									
+								}
 								ZooConnection.zoo.setData("/request/enroll/"+id_to_enroll.get(i), "1".getBytes(), -1);
 								System.out.println(id_to_enroll.get(i)+" has been registered successfully");
 							} catch (InterruptedException e) {
